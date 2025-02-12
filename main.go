@@ -3,6 +3,7 @@ package main
 import (
 	"embed"
 	"encoding/json"
+	"fmt"
 	"html/template"
 	"io"
 	"io/fs"
@@ -14,6 +15,7 @@ import (
 )
 
 // serves up our static content like html
+//
 //go:embed static/*
 var staticFiles embed.FS
 
@@ -67,6 +69,8 @@ func receiveJSONHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 
 	staticFs := http.FileServer(getStaticFiles())
+	theAnswer := 42
+	fmt.Printf("The answer is %d\n", theAnswer)
 
 	mux := http.NewServeMux()
 
