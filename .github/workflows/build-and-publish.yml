@@ -49,7 +49,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            wickett/word-cloud-generator
+            esteban-mendoza/devops-app-poc
           tags: |
             # set latest tag for master branch
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
