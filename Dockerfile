@@ -1,4 +1,4 @@
 FROM alpine:3.17
-COPY ./artifacts/linux/word-cloud-generator /opt
+COPY ./artifacts/linux/devops-app-poc /opt
 EXPOSE 8888
-ENTRYPOINT /opt/word-cloud-generator
+ENTRYPOINT /opt/devops-app-poc

@@ -1,5 +1,5 @@
 @slow @final
-Feature: Look for cross site scripting (xss) using arachni against word-cloud-generator
+Feature: Look for cross site scripting (xss) using arachni against devops-app-poc
 
 Scenario: The site is running on localhost:8888 and we are testing for xss
   Given "arachni" is installed

@@ -27,8 +27,8 @@ jobs:
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: word-cloud-generator
-        path: ./artifacts/linux/word-cloud-generator
+        name: devops-app-poc
+        path: ./artifacts/linux/devops-app-poc
         retention-days: 2
 
   build-docker:
@@ -41,7 +41,7 @@ jobs:
       - name: Fetch binary
         uses: actions/download-artifact@v4
         with:
-          name: word-cloud-generator
+          name: devops-app-poc
           path: ./artifacts/linux/
           
       - name: Docker meta

@@ -1,6 +1,6 @@
 [![Go Test](https://github.com/esteban-mendoza/devops-app-poc/actions/workflows/go.yml/badge.svg)](https://github.com/esteban-mendoza/devops-app-poc/actions/workflows/go.yml) [![CircleCI](https://circleci.com/gh/esteban-mendoza/devops-app-poc/tree/master.svg?style=svg)](https://circleci.com/gh/esteban-mendoza/devops-app-poc/tree/master)
 
-# word-cloud-generator
+# devops-app-poc
 
 It's a golang web app that takes a block of text and turns it into a word cloud.
 

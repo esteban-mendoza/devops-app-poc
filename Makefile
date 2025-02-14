@@ -1,4 +1,4 @@
-BINARY := word-cloud-generator
+BINARY := devops-app-poc
 ver := $(shell git rev-parse --short HEAD)
 
 all: clean test build
@@ -22,7 +22,7 @@ run:
 	@go run main.go
 
 start-mac: build
-	./artifacts/osx/word-cloud-generator
+	./artifacts/osx/devops-app-poc
 
 goconvey-install:
 	@go install github.com/smartystreets/goconvey
@@ -51,7 +51,7 @@ docker-build-amd: getver build
 	docker buildx build --load --platform linux/amd64 -f ./Dockerfile -t esteban-mendoza/devops-app-poc:$(ver)-amd64 -t esteban-mendoza/devops-app-poc:latest-amd64 .
 
 docker-run:
-	@echo "Starting new container of word-cloud-generator listening on localhost:8888"
+	@echo "Starting new container of devops-app-poc listening on localhost:8888"
 	docker run -it --rm -p 8888:8888 esteban-mendoza/devops-app-poc:latest-arm64
 
 docker-push:
